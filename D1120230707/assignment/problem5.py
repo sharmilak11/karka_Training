@@ -1,0 +1,5 @@
+name=input('Hello. What is your name?')
+print('\n')
+old=int(input(f"Hi, {name}! How old are you?"))
+print('\n')
+print(f"Did you know that in five years you will be{old+5} years old?:\n"f"And five years ago you were{old-5}! Imagine that!")
