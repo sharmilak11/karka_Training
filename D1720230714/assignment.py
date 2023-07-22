@@ -26,7 +26,7 @@ def cricket(cricket_players):
          no_of_players=no_of_players+1
          print(f"no_of_players:{no_of_players}")
       elif i["hat-trick wickets"]>5:
-       print( i["name"] "have taken more than 5 hat tricks wickets") 
+       print( i["name"]," have taken more than 5 hat tricks wickets") 
       else:
          a=i['top batting scores']
       for c in a:
