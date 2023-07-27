@@ -81,12 +81,12 @@
 #         lst.remove(i)
 #         lst.append(i) 
 # print(lst)
-lst=[1,100,300,4] 
-a=0    
-for i in lst:
-     if i>a:
-        a=i
-print("largest number in list:",a)
+lst=[678,100,300,4] 
+# a=0    
+# for i in lst:
+#      if i>a:
+#         a=i
+# print("largest number in list:",a)
 # lsts=[1,100,300,4]        
 # b=0
 # for i in lsts:
@@ -95,13 +95,15 @@ print("largest number in list:",a)
 #         b=i
 # print("Smallest no in lst is",b)             
 # def index(a):
-#     for i in 
+    # for i in 
 # duplicate
-# for i in lst
-# if i not in lst2
-# lst2.append(1)
-# else  
-# print i
+lst=[678,100,300,4,300,100] 
+lst2=[]
+for i in lst:
+ if i not in lst2:
+  lst2.append(i)
+print(lst2)
+
 # lst1=[1,3,4,5,6]
 # Enter=int(input("Enter a number:"))
 # for index,e in enumerate(lst1):

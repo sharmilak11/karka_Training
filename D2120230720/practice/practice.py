@@ -1,15 +1,21 @@
-# consumer_data={"consumer_name":"abi",
+# consumer_data={"consumer_name":"sharmi",
             #    "EB_reading":[1100,1200,1350,1650,2050]}
-units=[]
+name=input('enter your name:')
+eb_reading1=int(input('enter the first reading:'))
+eb_reading2=int(input('enter the second reading:'))
+eb_reading3=int(input('enter the third reading:'))
+eb_reading4=int(input('enter the fourth reading:'))
+consumer_data={"consumer_name":name,"Reading":[eb_reading1,eb_reading2,eb_reading3,eb_reading4]}
+
 
 month=0
 bill=0
+units=[]
 for i in range(0,len(['EB_reading'])-1): 
-            dict={} 
             month=i+1      
             a=["EB_reading"][i+1]-['EB_reading'][i]
             if a<100:
-                  print(f"month:{month}\nunits_consumed:{a}\nbill_amount:{bill}")
+                  print(f"month:{month}\naunits_consumed:{a}\nbill_amount:{bill}")
             elif a>=100 and a<200:
                   value=a*2
                   bill=bill+value
@@ -24,8 +30,23 @@ for i in range(0,len(['EB_reading'])-1):
                   bill=bill+value
             dict={"month":i+1,"units_consumed":a,"total_amount":value}       
             units.append(dict)
-print(units)
+            print(units)
 
+import json
+var=str(units)
+choice=input("enter your choice?")
+if choice=="json" and "JSON" and "Json" and "jsOn" and "JSon":
+       lst_json=json.dumps(var)
+       print(lst_json)
+elif choice=="dict":
+       lst_dict=str(units)
+       lst_dict=json.loads(var)
+       print(lst_dict)
+
+file=open(f"/home/user/Documents/{name}.txt","w")
+file.write(lst_dict)
+file.close()
+file=open(f"/home/user/Documents/{name}.txt","r")
 
 # list_string=str(units)
 # print(list_string)
@@ -46,27 +67,30 @@ print(units)
 # file.close()
 # file=open(f"/home/user/Documents/{name}.txt","r")
 
-import json
-name=input('enter your name:')
-eb_reading1=int(input('enter the first reading:'))
-eb_reading2=int(input('enter the second reading:'))
-eb_reading3=int(input('enter the third reading:'))
-eb_reading4=int(input('enter the fourth reading:'))
-consumer_data={"consumer_name":name,"Reading":[eb_reading1,eb_reading2,eb_reading3,eb_reading4]}
-choice=input("enter your choice?")
-if choice=="json" and "JSON" and "Json" and "jsOn" and "JSon":
-       lst_json=json.dumps(name)
-       print(lst_json)
-elif choice=="dict":
-       lst_dict=str(units)
-       print(lst_dict)       
+# import json
+# var=str(units)
+# text=""
+# name=input('enter your name:')
+# eb_reading2=int(input('enter the second reading:'))
+# eb_reading3=int(input('enter the third reading:'))
+# eb_reading4=int(input('enter the fourth reading:'))
+# consumer_data={"consumer_name":name,"Reading":[eb_reading1,eb_reading2,eb_reading3,eb_reading4]}
+# choice=input("enter your choice?")
+# if choice=="json" and "JSON" and "Json" and "jsOn" and "JSon":
+#        lst_json=json.dumps(var)
+#        print(lst_json)
+# elif choice=="dict":
+#        lst_dict=str(units)
+#        print(lst_dict)       
 
 
-for i in units:
-       file=open(f"/home/user/Documents/{name}.txt","r")
-       file.write(lst_dict)
-       file.close()
-file=open(f"/home/user/Documents/{name}.txt","r")
+# for i in units:
+#        text=text+(f"month:{i['month']},unit_consumed:{i['unit_consumed']},{i['bill_amount']}")
+                  
+#        file=open(f"/home/user/Documents/{name}.txt","w")
+      #  file.write(lst_dict)
+#        file.close()
+# # file=open(f"/home/user/Documents/{name}.txt","r")
 
 
 

@@ -5,5 +5,3 @@ for i in dup_value:
          org_value.append((dup_value))
 print(org_value)
  
-import json
-name=input
